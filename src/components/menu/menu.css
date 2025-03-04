@@ -6,6 +6,17 @@
   position: fixed;
   width: -webkit-fill-available;
   max-width: 2000px;
+
+  top: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+#menu.hidden {
+  transform: translateY(-100%);
+}
+
+#menu.visible {
+  transform: translateY(0);
 }
 
 .icon {

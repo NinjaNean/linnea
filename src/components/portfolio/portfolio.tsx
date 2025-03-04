@@ -10,7 +10,13 @@ function Portfolio() {
         <Header text="portfolio"></Header>
         {data.map((i) => {
           return (
-            <Project image={i.image} projectName={i.projectName} description={i.description} link={i.link}></Project>
+            <Project
+              key={i.projectName}
+              image={i.image}
+              projectName={i.projectName}
+              description={i.description}
+              link={i.link}
+            ></Project>
           );
         })}
       </section>
