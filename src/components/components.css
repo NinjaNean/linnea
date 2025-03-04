@@ -1,0 +1,50 @@
+.button {
+  background-color: #ffa500;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+
+  &:hover {
+    border: 2px solid #ffa500;
+    background-color: transparent;
+    color: orange;
+    transition: 0.3s;
+  }
+}
+
+.header {
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: orange;
+  position: relative;
+  padding: 0 2rem;
+  max-width: fit-content;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: orange;
+    width: 1.5rem;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before {
+    left: 0;
+  }
+}

@@ -1,0 +1,57 @@
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  position: fixed;
+  width: -webkit-fill-available;
+  max-width: 2000px;
+}
+
+.icon {
+  color: orange;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+  text-decoration: none;
+  transition: all;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    li {
+      position: relative;
+      padding-bottom: 4px;
+
+      &:hover {
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        color: orange;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70%;
+        height: 2px;
+        background-color: orange;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

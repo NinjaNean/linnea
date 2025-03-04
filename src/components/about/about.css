@@ -1,0 +1,22 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  padding: 5rem 0;
+
+  p {
+    width: 80%;
+    color: #a5a5a5;
+    padding: 0.5rem;
+  }
+}
+
+@media (width > 1000px) {
+  #about {
+    p {
+      width: 60%;
+    }
+  }
+}

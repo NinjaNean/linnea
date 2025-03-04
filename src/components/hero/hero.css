@@ -1,0 +1,33 @@
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8rem 3rem 0;
+  background: #2c2c2c;
+
+  .heroText {
+    margin: auto;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+
+    h1 {
+      font-weight: bold;
+    }
+  }
+
+  .heroImg {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 90%;
+    }
+  }
+}
+
+@media (width < 935px) {
+  #hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 8rem;
+  }
+}
