@@ -6,9 +6,6 @@
   position: fixed;
   width: -webkit-fill-available;
   max-width: 2000px;
-
-  top: 0;
-  transition: transform 0.5s ease-in-out;
 }
 
 #menu.hidden {
@@ -25,6 +22,14 @@
   font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
   text-decoration: none;
   transition: all;
+}
+
+.navbar a.selected li {
+  color: orange;
+}
+
+.navbar a.selected li::before {
+  transform: scaleX(1);
 }
 
 .navbar {

@@ -1,47 +1,31 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import "./menu.css";
 
 function Menu() {
-  const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      lastScrollY.current = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [active, setActive] = useState("#about");
 
   return (
-    <>
-      <section id="menu" className={isVisible ? "visible" : "hidden"}>
-        <a href="#hero" className="icon">
-          <h1>L.</h1>
-        </a>
+    <section id="menu">
+      <a href="#hero" className="icon">
+        <h1>L.</h1>
+      </a>
 
-        <ul className="navbar">
-          <a href="#about">
-            <li>About</li>
-          </a>
-          <a href="#portfolio">
-            <li>Portfolio</li>
-          </a>
-          <a href="#contact">
-            <li>Contact</li>
-          </a>
-        </ul>
-      </section>
-    </>
+      <ul className="navbar">
+        <a href="#about" className={active === "#about" ? "selected" : ""} onClick={() => setActive("#about")}>
+          <li>About</li>
+        </a>
+        <a
+          href="#portfolio"
+          className={active === "#portfolio" ? "selected" : ""}
+          onClick={() => setActive("#portfolio")}
+        >
+          <li>Portfolio</li>
+        </a>
+        <a href="#contact" className={active === "#contact" ? "selected" : ""} onClick={() => setActive("#contact")}>
+          <li>Contact</li>
+        </a>
+      </ul>
+    </section>
   );
 }
 
