@@ -1,5 +1,6 @@
 import "./hero.css";
 import Button from "../button.tsx";
+import heroImg from "../../assets/Group 1.svg";
 
 function Hero() {
   return (
@@ -14,7 +15,7 @@ function Hero() {
         </div>
 
         <div className="heroImg">
-          <img className="ellipse" src="src\assets\Group 1.svg" alt="" />
+          <img className="ellipse" src={heroImg} alt="" />
         </div>
       </section>
     </>
