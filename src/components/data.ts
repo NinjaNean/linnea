@@ -1,9 +1,17 @@
 import betterWebbImg from "../assets/bättrewebb.jpg";
 import yumyumImg from "../assets/yumyum.jpg";
+import lekladan from "../assets/lekladan.jpg";
 
 type projectType = { image: string; projectName: string; description: string; link: string };
 
 const projects: projectType[] = [
+  {
+    image: lekladan,
+    projectName: "LEKLÅDAN",
+    description:
+      "Leklådan was my first project where I used a database. It's a playful website with summer toys. This project gave me hands-on experience with storing and retrieving data using Firebase, and building an interactive interface with JavaScript.",
+    link: "https://ninjanean.github.io/lekladan/",
+  },
   {
     image: betterWebbImg,
     projectName: "BÄTTRE WEBB",
