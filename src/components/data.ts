@@ -2,9 +2,22 @@ import betterWebbImg from "../assets/bättrewebb.jpg";
 import yumyumImg from "../assets/yumyum.jpg";
 import lekladan from "../assets/lekladan.jpg";
 
-type projectType = { image: string; projectName: string; description: string; link: string };
+type projectType = {
+  image: string;
+  projectName: string;
+  description: string;
+  link: string;
+};
 
-const projects: projectType[] = [
+type AssignmentType = {
+  company: string;
+  role: string;
+  year: string;
+  description: string;
+  tags?: string[];
+};
+
+export const projects: projectType[] = [
   {
     image: lekladan,
     projectName: "LEKLÅDAN",
@@ -28,4 +41,19 @@ const projects: projectType[] = [
   },
 ];
 
-export default projects;
+export const assignments: AssignmentType[] = [
+  {
+    company: "Adacto",
+    role: "Truckdriver",
+    year: "2020-2025",
+    description: "bla bla",
+    tags: ["Stuff"],
+  },
+  {
+    company: "addCIT AB",
+    role: "Frontend Developer Intern",
+    year: "2025-2026",
+    description: "bla bla",
+    tags: ["HTML", "CSS", "TypeScript", "Angular", "Abp.io", "Git"],
+  },
+];
