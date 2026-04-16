@@ -61,3 +61,10 @@
     }
   }
 }
+
+.error {
+  color: #f16868;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
