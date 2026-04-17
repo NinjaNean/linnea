@@ -9,14 +9,6 @@ type projectType = {
   link: string;
 };
 
-type AssignmentType = {
-  company: string;
-  role: string;
-  year: string;
-  description: string;
-  tags?: string[];
-};
-
 export const projects: projectType[] = [
   {
     image: lekladan,
@@ -38,22 +30,5 @@ export const projects: projectType[] = [
     description:
       "I created a website for a food truck where users can order dumplings. The page has functions for menu, shopping cart, ETA and receipt. I used APIs to manage the shopping cart, delivery times and receipts, which gave me experience working with dynamic data and interactivity.",
     link: "https://ninjanean.github.io/YumYumGimMeSum/",
-  },
-];
-
-export const assignments: AssignmentType[] = [
-  {
-    company: "Adacto",
-    role: "Truckdriver",
-    year: "2020-2025",
-    description: "bla bla",
-    tags: ["Stuff"],
-  },
-  {
-    company: "addCIT AB",
-    role: "Frontend Developer Intern",
-    year: "2025-2026",
-    description: "bla bla",
-    tags: ["HTML", "CSS", "TypeScript", "Angular", "Abp.io", "Git"],
   },
 ];
