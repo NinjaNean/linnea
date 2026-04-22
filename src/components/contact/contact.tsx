@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Button from "../button";
 import Header from "../header";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../data";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 
@@ -8,6 +10,9 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^[0-9+()\s-]*$/;
 
 function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language as keyof typeof translations];
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -28,24 +33,23 @@ function Contact() {
     };
 
     if (!name.trim()) {
-      nextErrors.name = "Please enter your name.";
+      nextErrors.name = t.error_name;
     }
 
     if (!email.trim()) {
-      nextErrors.email = "Please enter your email address.";
+      nextErrors.email = t.error_email;
     } else if (!emailRegex.test(email)) {
-      nextErrors.email = "Please enter a valid email address.";
+      nextErrors.email = t.error_email_invalid;
     }
 
     if (!message.trim()) {
-      nextErrors.message = "Please enter a message.";
+      nextErrors.message = t.error_message;
     } else if (message.trim().length < 10) {
-      nextErrors.message = "Message should be at least 10 characters.";
+      nextErrors.message = t.error_message_length;
     }
 
     if (phoneNumber.trim() && !phoneRegex.test(phoneNumber)) {
-      nextErrors.phoneNumber =
-        "Phone number may contain only digits, spaces, +, and -.";
+      nextErrors.phoneNumber = t.error_phone;
     }
 
     setErrors(nextErrors);
@@ -99,11 +103,11 @@ function Contact() {
         <form onSubmit={sendEmail} noValidate>
           <div>
             <label>
-              NAME *
+              {t.contact_name}
               <input
                 name="name"
                 type="text"
-                placeholder="Type your name"
+                placeholder={t.name_placeholder}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -111,11 +115,11 @@ function Contact() {
               {errors.name && <span className="error">{errors.name}</span>}
             </label>
             <label>
-              PHONE NUMBER
+              {t.contact_phone}
               <input
                 name="phone_number"
                 type="text"
-                placeholder="Type your phone number"
+                placeholder={t.phone_placeholder}
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
@@ -124,11 +128,11 @@ function Contact() {
               )}
             </label>
             <label>
-              EMAIL *
+              {t.contact_email}
               <input
                 name="email"
                 type="email"
-                placeholder="Type your email address"
+                placeholder={t.email_placeholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -136,10 +140,10 @@ function Contact() {
               {errors.email && <span className="error">{errors.email}</span>}
             </label>
             <label>
-              YOUR MESSAGE *
+              {t.contact_message}
               <textarea
                 name="message"
-                placeholder="Type your message here"
+                placeholder={t.message_placeholder}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -150,7 +154,7 @@ function Contact() {
             </label>
           </div>
 
-          <Button text="Send Message" type="submit"></Button>
+          <Button text={t.contact_send_button} type="submit"></Button>
         </form>
       </section>
     </>
