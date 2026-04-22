@@ -12,7 +12,7 @@ function Hero() {
     <>
       <section id="hero">
         <div className="heroText">
-          <h1>{t.hero_name}</h1>
+          <h1>Linnéa Nilsson</h1>
           <p>{t.hero_title}</p>
           <a href="#contact">
             <Button text={t.hero_button}></Button>

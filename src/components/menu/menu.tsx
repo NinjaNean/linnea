@@ -14,33 +14,35 @@ function Menu() {
         <h1>L.</h1>
       </a>
 
-      <ul className="navbar">
-        <a
-          href="#about"
-          className={active === "#about" ? "selected" : ""}
-          onClick={() => setActive("#about")}
-        >
-          <li>{t.nav_about}</li>
-        </a>
-        <a
-          href="#portfolio"
-          className={active === "#portfolio" ? "selected" : ""}
-          onClick={() => setActive("#portfolio")}
-        >
-          <li>{t.nav_portfolio}</li>
-        </a>
-        <a
-          href="#contact"
-          className={active === "#contact" ? "selected" : ""}
-          onClick={() => setActive("#contact")}
-        >
-          <li>{t.nav_contact}</li>
-        </a>
+      <div className="menu-actions">
+        <ul className="navbar">
+          <a
+            href="#about"
+            className={active === "#about" ? "selected" : ""}
+            onClick={() => setActive("#about")}
+          >
+            <li>{t.nav_about}</li>
+          </a>
+          <a
+            href="#portfolio"
+            className={active === "#portfolio" ? "selected" : ""}
+            onClick={() => setActive("#portfolio")}
+          >
+            <li>{t.nav_portfolio}</li>
+          </a>
+          <a
+            href="#contact"
+            className={active === "#contact" ? "selected" : ""}
+            onClick={() => setActive("#contact")}
+          >
+            <li>{t.nav_contact}</li>
+          </a>
+        </ul>
 
         <button className="language-toggle" onClick={toggleLanguage}>
           {language === "sv" ? "English" : "Svenska"}
         </button>
-      </ul>
+      </div>
     </section>
   );
 }
