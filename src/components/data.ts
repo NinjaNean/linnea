@@ -20,7 +20,7 @@ export const translations = {
     about_text_2:
       "I love crafting clean, user-friendly interfaces and bringing designs to life with modern technologies like HTML, CSS, and TypeScript.",
     about_text_3:
-      "Currently, I'm expanding my skills in Angular and exploring the world of UI/UX design. I'm always eager to learn and take on new challenges — let's build something great together!",
+      "Currently, I'm expanding my skills in .NET to improve my skills in backend. I'm always eager to learn and take on new challenges — let's build something great together!",
     contact_name: "NAME *",
     contact_phone: "PHONE NUMBER",
     contact_email: "EMAIL *",
@@ -52,7 +52,7 @@ export const translations = {
     about_text_2:
       "Jag älskar att skapa rena, användbara gränssnitt och föra designer till liv med moderna tekniker som HTML, CSS och TypeScript.",
     about_text_3:
-      "För närvarande utökar jag mina kunskaper i Angular och utforskar UI/UX-designens värld. Jag är alltid villig att lära mig och ta på mig nya utmaningar — låt oss bygga något fantastiskt tillsammans!",
+      "För närvarande utökar jag mina kunskaper i .NET för att förbättra mina kunskaper i backend. Jag är alltid villig att lära mig och ta på mig nya utmaningar — låt oss bygga något fantastiskt tillsammans!",
     contact_name: "NAMN *",
     contact_phone: "TELEFONNUMMER",
     contact_email: "E-POST *",
@@ -87,7 +87,7 @@ export const projects: projectType[] = [
     sweDescription:
       "Leklådan var mitt första projekt där jag använde en databas. Det är en lekfull webbplats med sommarleksaker. Det här projektet gav mig praktisk erfarenhet av att lagra och hämta data med Firebase och bygga ett interaktivt gränssnitt med JavaScript.",
     link: "https://ninjanean.github.io/lekladan/",
-    tags: ["HTML", "CSS", "JavaScript", "Firebase"],
+    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Git"],
   },
   {
     image: betterWebbImg,
@@ -97,7 +97,7 @@ export const projects: projectType[] = [
     sweDescription:
       "Ett av mina första skolprojekt var Bättre Webb, en webbplats för en fiktiv konferens för frontendsutvecklare. Webbplatsen innehöll information om programmet, talare och biljetter. Fokus låg på att skapa en enkel och tydlig sida med HTML och CSS.",
     link: "https://ninjanean.github.io/battre-webb/",
-    tags: ["HTML", "CSS"],
+    tags: ["HTML", "CSS", "Git"],
   },
   {
     image: yumyumImg,
@@ -107,6 +107,6 @@ export const projects: projectType[] = [
     sweDescription:
       "Jag skapade en webbplats för en matbil där användare kan beställa dumplings. Sidan har funktioner för meny, varukorg, ETA och kvitto. Jag använde ett API för att hantera varukorgen, leveranstider och kvitton, vilket gav mig erfarenhet av att arbeta med dynamisk data och interaktivitet.",
     link: "https://ninjanean.github.io/YumYumGimMeSum/",
-    tags: ["HTML", "CSS", "JavaScript", "API"],
+    tags: ["HTML", "CSS", "JavaScript", "API", "Git"],
   },
 ];
